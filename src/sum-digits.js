@@ -16,7 +16,7 @@ function getSumOfDigits(number) {
   let numberArray = ('' + number).split('').map(Number)
   let arraySum
 
-  console.log(numberArray)
+  // console.log(numberArray)
 
   while (numberArray.length > 1) {
     arraySum = numberArray.reduce((a, b) => a + b, 0)
@@ -27,7 +27,7 @@ function getSumOfDigits(number) {
   return numberArray[0]
 }
 
-console.log(getSumOfDigits(91), 'return')
+// console.log(getSumOfDigits(91), 'return')
 
 module.exports = {
   getSumOfDigits,
