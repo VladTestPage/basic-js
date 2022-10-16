@@ -18,7 +18,7 @@ function createDreamTeam(array) {
     return false
   }
 
-  let arrayFiltred = []
+  let arrayFiltredFromTypes = []
   let arrayFiltredFromSapces = []
   let i = 0
   let string = ''
@@ -26,15 +26,15 @@ function createDreamTeam(array) {
 
   while (i < array.length) {
     if (typeof array[i] === 'string') {
-      arrayFiltred.push(array[i])
+      arrayFiltredFromTypes.push(array[i])
     }
     i++
   }
 
   i = 0
 
-  while (i < arrayFiltred.length) {
-    arrayFiltredFromSapces.push(arrayFiltred[i].trim())
+  while (i < arrayFiltredFromTypes.length) {
+    arrayFiltredFromSapces.push(arrayFiltredFromTypes[i].trim())
     i++
   }
 
@@ -45,26 +45,10 @@ function createDreamTeam(array) {
     i++
   }
 
-  stringSorted = string.split('').sort().join('').toUpperCase()
+  stringSorted = string.split('').sort().join('')
 
   return stringSorted
 }
-
-console.log(
-  createDreamTeam([
-    ['David Abram'],
-    ['Robin Attfield'],
-    'Thomas Berry',
-    ['Paul R.Ehrlich'],
-    'donna Haraway',
-    ' BrIaN_gOodWiN  ',
-    {
-      0: 'Serenella Iovino',
-    },
-    'Erazim Kohak',
-    '  val_plumwood',
-  ])
-)
 
 module.exports = {
   createDreamTeam,
